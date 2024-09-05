@@ -1,4 +1,4 @@
-package com.luannycholas.exceptions;
+package com.siap.exceptions;
 
 public class UserCreationException extends RuntimeException {
     public UserCreationException(String message) {

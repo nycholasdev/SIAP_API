@@ -1,8 +1,5 @@
-package com.luannycholas.controller;
+package com.siap.controller;
 
-import com.luannycholas.exceptions.ExceptionDTO;
-import com.luannycholas.models.User;
-import com.luannycholas.services.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -23,6 +20,10 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.siap.exceptions.ExceptionDTO;
+import com.siap.models.User;
+import com.siap.services.UserService;
 
 @RestController
 @RequestMapping(path = "/api/user")
@@ -51,7 +52,7 @@ public class UserController {
     @PostMapping(path = "/")
     public ResponseEntity<String> insert(@RequestBody @Validated User user) {
         userService.createUserService(user);
-        String successMessage = "User created successfully";
+        String successMessage = "User created successfully!";
         return new ResponseEntity<>(successMessage,HttpStatus.CREATED);
     }
 
@@ -79,7 +80,7 @@ public class UserController {
             response.put("message", "No users found.");
             return new ResponseEntity<>(response, HttpStatus.NO_CONTENT);
         } else {
-            response.put("message", "Users retrieved successfully.");
+            response.put("message", "Users retrieved successfully!");
             response.put("users", users);
             return new ResponseEntity<>(response, HttpStatus.OK);
         }

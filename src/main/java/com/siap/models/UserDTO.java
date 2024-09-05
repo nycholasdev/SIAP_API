@@ -1,4 +1,4 @@
-package com.luannycholas.models;
+package com.siap.models;
 
 import lombok.Data;
 

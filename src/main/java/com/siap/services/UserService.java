@@ -1,9 +1,11 @@
-package com.luannycholas.services;
+package com.siap.services;
 
-import com.luannycholas.models.User;
-import com.luannycholas.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.siap.models.User;
+import com.siap.repositories.UserRepository;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -40,5 +42,4 @@ public class UserService {
         }
         return false;
     }
-
 }

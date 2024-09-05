@@ -1,4 +1,4 @@
-package com.luannycholas.exceptions;
+package com.siap.exceptions;
 
 public class NotFoundException extends RuntimeException {
     public NotFoundException(String message) {
